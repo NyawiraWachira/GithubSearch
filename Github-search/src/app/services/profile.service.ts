@@ -13,4 +13,7 @@ export class ProfileService {
     
     return this.http.get(this.url+username);
   }
+  getRepos (username:string){
+    return this.http.get(this.url+username+"/repos");
+  }
 }
