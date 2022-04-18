@@ -1,1 +1,40 @@
-<p>user-profile works!</p>
+<div class="row">
+    <div class="col-md-12">
+    <div class="card" id="card" style="width: 50rem;">
+                <img src={{userDetail.avatar_url}} class="card-img-top" alt="..." width="600px" height="600px">
+                <div class="card-body">
+                <h5 class="card-title">{{userDetail.login}}</h5>
+                <p>
+                    <span class="btn btn-primary btn-sm">{{userDetail.followers}} Followers</span>
+                    <span class="btn btn-success btn-sm" id="follow">Following {{userDetail.following}}</span>
+                    <span class="btn btn-secondary btn-sm">{{userDetail.public_repos}} Public Repos</span>
+                    </p> 
+                </div>
+               
+
+            <p><a href="{{userDetail.html_url}}" target="_blank" class="btn btn-info" id="profile">View Profile on GitHub</a>
+            </p>
+        </div>            
+        </div> 
+</div>
+<br><div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h4 class="card-header">Repositories</h4>
+                <div class="card-body"  *ngFor="let repo of repos">
+                  
+                  <p class="card-text">
+                   <strong>{{repo.name}}</strong><br><br><a href="{{repo.html_url}}" target="_blank"
+                    class="btn btn-primary" >View Repository on GitHub</a>
+                </p>
+                <p>{{repo.description}}</p>
+            </div>
+
+        </div>
+                
+                   
+
+            
+
+        </div>
+    </div>
