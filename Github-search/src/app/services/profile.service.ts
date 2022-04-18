@@ -16,4 +16,10 @@ export class ProfileService {
   getRepos (username:string){
     return this.http.get(this.url+username+"/repos");
   }
+  getProfile (username:string) {
+    return this.http.get("https://api.github.com/users/Nyawira-Wachira");
+  }
+  getProfileRepos (username:string) {
+    return this.http.get("https://api.github.com/users/Nyawira-Wachira"+"/repos");
+  }
 }
