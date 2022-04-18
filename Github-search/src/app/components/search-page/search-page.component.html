@@ -1,1 +1,9 @@
-<p>search-page works!</p>
+<div class="container">
+    <form [formGroup]="searchForm" (ngSubmit)="sendUser()">
+        <label for = "">Username</label>
+        <input type="text" name="" id="" formControlName="username">
+
+
+        <button class="btn btn-info ">Search</button>
+    </form>
+</div>

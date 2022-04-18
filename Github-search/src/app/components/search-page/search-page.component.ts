@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-search-page',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor() { }
+  searchForm : FormGroup;
+  username: string;
+
+  constructor( private route : Router) { }
 
   ngOnInit(): void {
+    this.searchForm = new FormGroup({
+      username:new FormControl(
+        null,
+        [Validators.required]
+      )
+
+    })
+  }
+  sendUser(){
+    this.username=this.searchForm.value.username;
+
+    this.route.navigate([`user/${this.username}`]);
   }
 
 }
+
