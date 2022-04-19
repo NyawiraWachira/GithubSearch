@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { SearchPageComponent } from './components/search-page/search-page.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { TimePipe } from './time.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     HeaderComponent,
     HomepageComponent,
     SearchPageComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    TimePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
