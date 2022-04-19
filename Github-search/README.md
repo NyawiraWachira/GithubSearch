@@ -8,7 +8,7 @@ Abigail Wachira
 ## Description
 It is an angular App that allows you to search for github users and their repositories. It provides a form in the searchpage where you put valid names of 
 a github user then on clicking the search button it displays the profile of the github user. It displays profile information of users like the number of followers, number of followings, number of public repositories and then it displays the user's public repositores.
-The application also allows one to view the user profile and their public repositories on the official github page using buttons provided on each section. 
+The application also allows one to view the user profile and their public repositories on the official github page using buttons provided on each section. The application uses Http Client to retrieve user information from GitHub's api.
 
 
 ## Setup/Installation Requirements
