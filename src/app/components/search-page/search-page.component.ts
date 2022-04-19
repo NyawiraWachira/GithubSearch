@@ -22,6 +22,7 @@ export class SearchPageComponent implements OnInit {
         [Validators.required]
       )
 
+
     })
   }
   sendUser(){

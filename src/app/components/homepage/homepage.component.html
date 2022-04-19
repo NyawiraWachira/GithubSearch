@@ -18,11 +18,11 @@
         <div class="card text-dark bg-light mb-3"  style="max-width: 70rem;">
             <h4 class="card-header">Repositories</h4>
                   <div class="card-body"  *ngFor="let repo of repos ;let i = index">               
-                  <p class="card-text">
-                   <strong>{{repo.name}}</strong><br><br><a href="{{repo.html_url}}" target="_blank"
+                  <div class="card-text">
+                   <strong>{{repo.name|uppercase}}</strong><br><br><p appHighlight>{{repo.description}}</p>
+                   <p>Created on {{repo.created_at|date}}</p><a href="{{repo.html_url}}" target="_blank"
                     class="btn btn-primary" >View Repository on GitHub</a>
-                </p>
-                <p>{{repo.description}}</p>
+                  </div>           
                 </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col-md-12">
-    <div class="card" id="card" style="width: 40rem;">
+    <div class="col-md-5">
+    <div class="card" id="card" style="width: 28rem;">
                 <img src={{userDetail.avatar_url}} class="card-img-top" alt="..." width="500px" height="500px">
                 <div class="card-body">
                 <h5 class="card-title">{{userDetail.login}}</h5>
@@ -14,22 +14,18 @@
 
             <p><a href="{{userDetail.html_url}}" target="_blank" class="btn btn-info" id="profile">View Profile on GitHub</a>
             </p>
-        </div>            
-        </div> 
-</div>
-<br><div class="row">
-        <div class="col-md-12">
+    </div>            
+    </div> 
+        <div class="col-md-7">
             <div class="card">
                 <h4 class="card-header">Repositories</h4>
-                <div class="card-body"  *ngFor="let repo of repos">
-                  
-                  <p class="card-text">
-                   <strong>{{repo.name}}</strong><br><br><a href="{{repo.html_url}}" target="_blank"
+                <div class="card-body"  *ngFor="let repo of repos">            
+                  <div class="card-text">
+                   <strong>{{repo.name|uppercase}}</strong><br><br><p appHighlight>{{repo.description}}</p>
+                   <p>Created on {{repo.created_at|date}}</p><a href="{{repo.html_url}}" target="_blank"
                     class="btn btn-primary" >View Repository on GitHub</a>
-                </p>
-                <p>{{repo.description}}</p>
+                  </div>
+                </div>
             </div>
-
         </div>
-        </div>
-    </div>
+</div>
