@@ -2,6 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
+#### By 
+Abigail Wachira
+
+## Description
+It is an angular App that allows you to search for github users and their repositories. It provides a form in the searchpage where you put name of 
+a github user then on clicking the search button it displays the profile of the github user. It displays profile information of users like the number of followers, number of followings, number of public repositories and then it displays the user's public repositores.
+The application also allows one to view the user profile and their public repositories on the official github page using buttons provided on each section.
+
+## Setup/Installation Requirements
+* Fork this repository to your github account.
+* Open the terminal on your pc and navigate to the specific folder location that you want this directory to be stored.
+* Clone the forked repository in your account, to the specific folder chosen through the git clone command.
+* Open the folder you have cloned into.
+* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
+  The application will automatically reload if you change any of the source files.
+   
+## Technologies Used
+* Angular
+* TypeScript
+* HTML
+* CSS
+* Bootstrap
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
