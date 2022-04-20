@@ -1,30 +1,25 @@
-<div class="row">
-    <div class="col-md-5">
-    <div class="card" id="card" style="width: 28rem;">
-                <img src={{userDetail.avatar_url}} class="card-img-top" alt="..." width="320px" height="320px">
-                <div class="card-body">
-                <h5 class="card-title">{{userDetail.login}}</h5>
-                <p>
-                    <span class="btn btn-primary btn-sm">{{userDetail.followers}} Followers</span>
-                    <span class="btn btn-success btn-sm" id="follow">Following {{userDetail.following}}</span>
-                    <span class="btn btn-secondary btn-sm">{{userDetail.public_repos}} Public Repos</span>
-                    </p> 
-                </div>
-            <p><a href="{{userDetail.html_url}}" target="_blank" class="btn btn-info" id="profile">View Profile on GitHub</a>
-            </p>
-    </div>            
-    </div> 
-    <div class="col-md-7">
-        <div class="card text-dark bg-light mb-3"  style="max-width: 70rem;">
-            <h4 class="card-header">Repositories</h4>
-                  <div class="card-body"  *ngFor="let repo of repos ;let i = index">               
-                  <div class="card-text">
-                   <strong>{{repo.name|uppercase}}</strong><br><br><p appHighlight>{{repo.description}}</p>
-                   <p>Created on {{repo.created_at|date}}</p><a href="{{repo.html_url}}" target="_blank"
-                    class="btn btn-primary" >View Repository on GitHub</a>
-                  </div>           
-                </div>
-        </div>
+<br><br><div class="card-group" >
+    <div class="card">
+      <img src="./assets/images/bg.jpeg" class="card-img-top" id="img"  alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">You can search for github users and look at their profiles.</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
     </div>
-</div>
-
+    <div class="card">
+      <img src="./assets/images/bg1.jpeg" class="card-img-top" id="img"   alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">You can look at the public repositories of GitHub users.</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./assets/images/hd.jpeg" class="card-img-top" id="img"  alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">You can also access profiles and repositories of users in their official github pages.</p>
+      </div>
+    </div>
+  </div>

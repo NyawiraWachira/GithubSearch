@@ -1,11 +1,7 @@
-#follow {
-    margin-left: 10px;
-    margin-right: 10px;
+.card {
+    margin: 30px;
 }
-#repo {
-    text-align: center;
-}
-
-#profile {
-    margin-left: 80px;
+.card-text {
+    font-family: 'Are You Serious';
+    font-size: 2.1vw;
 }

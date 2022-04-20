@@ -1,6 +1,19 @@
 #search {
     margin-left: 4px;
+    
 }
 #name {
     margin-right: 4px;
+    margin-top: 70px;
+}
+#follow {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#repo {
+    text-align: center;
+}
+
+#profile {
+    margin-left: 80px;
 }

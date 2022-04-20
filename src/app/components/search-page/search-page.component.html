@@ -1,7 +1,43 @@
-<div class="container">
-    <form [formGroup]="searchForm" (ngSubmit)="sendUser()">
-        <label for = "" id="name">Username</label>
-        <input type="text" name="" id="" formControlName="username">
-        <button class="btn btn-info" id="search" >Search</button>
-    </form>
+<br><div class="row">
+    <div class="col-md-5">
+    <div class="card" id="card" style="width: 25rem;">
+                <img src={{userDetail.avatar_url}} class="card-img-top" alt="..." width="200px" height="250px">
+                <div class="card-body">
+                <h5 class="card-title">{{userDetail.login}}</h5>
+                <p>
+                    <span class="btn btn-primary btn-sm">{{userDetail.followers}} Followers</span>
+                    <span class="btn btn-success btn-sm" id="follow">Following {{userDetail.following}}</span>
+                    <span class="btn btn-secondary btn-sm">{{userDetail.public_repos}} Public Repos</span>
+                    </p> 
+                </div>
+            <p><a href="{{userDetail.html_url}}" target="_blank" class="btn btn-info" id="profile">View Profile on GitHub</a>
+            </p>
+    </div>            
+    </div> 
+    <div class="col-md-6">
+    <div class="container">
+        <form [formGroup]="searchForm" (ngSubmit)="sendUser()">
+            <label for = "" id="name">Username</label>
+            <input type="text" name="" id="" formControlName="username">
+            <button class="btn btn-info" id="search" >Search</button>
+        </form>
+    </div>
+    </div>
 </div>
+    <br><div class="col-md-10">
+        <div class="card text-dark bg-light mb-3"  style="max-width: 60rem;">
+            <h4 class="card-header">Repositories</h4>
+                  <div class="card-body"  *ngFor="let repo of repos ;let i = index">               
+                  <div class="card-text">
+                   <strong>{{repo.name|uppercase}}</strong><br><br><p appHighlight>{{repo.description}}</p>
+                   <p>Created on {{repo.created_at|date}}</p><a href="{{repo.html_url}}" target="_blank"
+                    class="btn btn-primary" >View Repository on GitHub</a>
+                  </div>           
+                </div>
+        </div>
+    </div>
+
+
+
+
+
