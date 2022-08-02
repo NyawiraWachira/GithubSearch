@@ -17,9 +17,9 @@ export class ProfileService {
     return this.http.get(this.url+username+"/repos");
   }
   getProfile (username:string) {
-    return this.http.get("https://api.github.com/users/Nyawira-Wachira");
+    return this.http.get("https://api.github.com/users/NyawiraWachira");
   }
   getProfileRepos (username:string) {
-    return this.http.get("https://api.github.com/users/Nyawira-Wachira"+"/repos");
+    return this.http.get("https://api.github.com/users/NyawiraWachira"+"/repos");
   }
 }
